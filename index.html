@@ -3,104 +3,417 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DealRadar India 🇮🇳 | Gadget Deals & Price Drops</title>
-<meta name="description" content="DealRadar India helps you discover useful gadget deals, price drops and offers.">
+
+<title>DealRadar India | Gadget Deals & Buying Guides</title>
+
+<meta name="description" content="DealRadar India helps shoppers discover useful gadget information, buying guides, offers and deals on electronics and accessories.">
+
 <style>
-:root{--bg:#0b1220;--card:#121c2f;--text:#f7f9fc;--muted:#aeb9cc;--accent:#ffb703;--accent2:#ff7a00;--line:#24324a}
-*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#172033}
-header{background:linear-gradient(135deg,#0b1220,#182640);color:white}
-nav{max-width:1120px;margin:auto;padding:20px 22px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:22px;font-weight:800}.logo span{color:var(--accent)}
-nav a{color:#dce5f5;text-decoration:none;margin-left:22px;font-size:14px}
-.hero{max-width:1120px;margin:auto;padding:78px 22px 90px;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
-.badge{display:inline-block;background:rgba(255,183,3,.13);border:1px solid rgba(255,183,3,.35);color:#ffd166;padding:8px 12px;border-radius:999px;font-size:13px;font-weight:700}
-h1{font-size:52px;line-height:1.06;margin:18px 0 16px} .hero p{font-size:18px;line-height:1.7;color:#c3cee0;max-width:650px}
-.btn{display:inline-block;margin-top:18px;padding:13px 19px;border-radius:10px;text-decoration:none;font-weight:800}
-.primary{background:var(--accent);color:#17120a}.secondary{border:1px solid #52617a;color:white;margin-left:10px}
-.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:28px;border-radius:22px}
-.hero-card .icon{font-size:52px}.hero-card h3{margin:12px 0 8px}.hero-card p{font-size:14px;margin:0}
-section{max-width:1120px;margin:auto;padding:65px 22px}.section-title{text-align:center;margin-bottom:34px}
-.section-title h2{font-size:32px;margin:0 0 8px}.section-title p{color:#667085}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{background:white;border:1px solid #e4e8ef;border-radius:16px;padding:23px;box-shadow:0 7px 25px rgba(20,30,50,.06)}
-.card .emoji{font-size:32px}.card h3{margin:14px 0 7px}.card p{color:#667085;line-height:1.55;font-size:14px}
-.deals{background:#0f172a;color:white;max-width:none}.deals-inner{max-width:1120px;margin:auto;padding:65px 22px}.deal-box{background:#172238;border:1px solid #283852;border-radius:18px;padding:28px;text-align:center}.deal-box h3{margin-top:0}.deal-box p{color:#b9c4d6;line-height:1.7}
-.info{display:grid;grid-template-columns:1fr 1fr;gap:22px}.info .card{padding:28px}
-footer{background:#080d17;color:#aeb9cc;padding:28px 22px;text-align:center;font-size:13px}
-@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px}.grid{grid-template-columns:1fr 1fr}.info{grid-template-columns:1fr}h1{font-size:40px}nav a{display:none}}
-@media(max-width:500px){.grid{grid-template-columns:1fr}}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+    line-height: 1.6;
+}
+
+header {
+    background: #0b1220;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #ffb703;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ffb703;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0b1220, #182640);
+    color: white;
+    padding: 85px 22px;
+}
+
+.hero-content {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 52px;
+    max-width: 700px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 680px;
+    color: #d6dbea;
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.button {
+    display: inline-block;
+    background: #ffb703;
+    color: #111827;
+    padding: 13px 22px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 60px 22px;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.section-text {
+    color: #667085;
+    margin-bottom: 28px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e4e7ec;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.04);
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #667085;
+    font-size: 14px;
+}
+
+.guides {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.guide {
+    background: white;
+    border: 1px solid #e4e7ec;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.guide h3 {
+    margin-bottom: 8px;
+}
+
+.guide p {
+    color: #667085;
+    font-size: 14px;
+}
+
+.about {
+    background: white;
+    border-top: 1px solid #e4e7ec;
+    border-bottom: 1px solid #e4e7ec;
+}
+
+.telegram {
+    background: #0b1220;
+    color: white;
+    border-radius: 18px;
+    padding: 42px;
+    text-align: center;
+}
+
+.telegram h2 {
+    margin-bottom: 10px;
+}
+
+.telegram p {
+    color: #cbd5e1;
+    margin-bottom: 22px;
+}
+
+footer {
+    background: #080d17;
+    color: #aeb7c7;
+    padding: 35px 22px;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer a {
+    color: #dce3ef;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.disclosure {
+    max-width: 850px;
+    margin: 18px auto 0;
+    color: #7f8a9c;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .guides {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    nav a {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 520px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 60px 22px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<nav>
-  <div class="logo">Deal<span>Radar</span> India 🇮🇳</div>
-  <div><a href="#deals">Deals</a><a href="#categories">Categories</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-</nav>
-<div class="hero">
-  <div>
-    <span class="badge">SMART SHOPPING • INDIA</span>
-    <h1>Find better gadget deals, faster.</h1>
-    <p>DealRadar India brings useful gadget offers and price-drop updates together in one simple place.</p>
-    <a class="btn primary" href="#deals">Explore Deals</a>
-    <a class="btn secondary" href="https://t.me/dealradar_ind" target="_blank" rel="noopener">Join Telegram</a>
-  </div>
-  <div class="hero-card">
-    <div class="icon">📡</div>
-    <h3>DealRadar India</h3>
-    <p>Gadget deals • Price drops • Useful offers</p>
-  </div>
-</div>
+    <div class="nav">
+        <div class="logo">DealRadar <span>India 🇮🇳</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#guides">Guides</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<section id="categories">
-  <div class="section-title">
-    <h2>Popular Categories</h2>
-    <p>Browse the gadget categories we focus on.</p>
-  </div>
-  <div class="grid">
-    <div class="card"><div class="emoji">🎧</div><h3>Audio</h3><p>Earbuds, headphones and speakers.</p></div>
-    <div class="card"><div class="emoji">📱</div><h3>Smartphones</h3><p>Phones, accessories and useful mobile gear.</p></div>
-    <div class="card"><div class="emoji">⌚</div><h3>Smartwatches</h3><p>Wearables and everyday smart devices.</p></div>
-    <div class="card"><div class="emoji">💻</div><h3>Computing</h3><p>Laptops, keyboards, mice and accessories.</p></div>
-  </div>
+<main>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Smart Gadget Deals & Buying Guides</h1>
+
+        <p>
+            Discover useful information about smartphones, audio products,
+            smartwatches, laptops and other everyday gadgets.
+        </p>
+
+        <a class="button" href="https://t.me/dealradar_ind" target="_blank">
+            📢 Join Telegram
+        </a>
+    </div>
 </section>
 
-<div class="deals" id="deals">
-  <div class="deals-inner">
-    <div class="section-title">
-      <h2>Latest Deals</h2>
-      <p>Verified deal posts will appear here as the site is connected to the deal system.</p>
-    </div>
-    <div class="deal-box">
-      <h3>🚀 Deals are coming soon</h3>
-      <p>We are preparing the DealRadar India deal feed. Until live price data is connected, this page intentionally avoids showing made-up prices or fake offers.</p>
-      <a class="btn primary" href="https://t.me/dealradar_ind" target="_blank" rel="noopener">Follow DealRadar India</a>
-    </div>
-  </div>
-</div>
+<section id="categories">
 
-<section id="about">
-  <div class="section-title"><h2>About DealRadar India</h2><p>Simple, useful and transparent gadget deal discovery.</p></div>
-  <div class="info">
-    <div class="card"><h3>🎯 Our goal</h3><p>Help shoppers discover useful gadget offers and price drops without unnecessary clutter.</p></div>
-    <div class="card"><h3>🔎 Transparent updates</h3><p>Deal information should be checked before publishing. Prices and availability can change at any time.</p></div>
-  </div>
+    <h2 class="section-title">Explore Categories</h2>
+
+    <p class="section-text">
+        Explore our main gadget categories and discover useful buying information.
+    </p>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="card-icon">📱</div>
+            <h3>Smartphones</h3>
+            <p>Buying tips, features and useful information for choosing a smartphone.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🎧</div>
+            <h3>Audio</h3>
+            <p>Learn about earbuds, headphones and important audio features.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">⌚</div>
+            <h3>Smartwatches</h3>
+            <p>Understand important smartwatch features before making a purchase.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">💻</div>
+            <h3>Computing</h3>
+            <p>Helpful information about laptops, RAM, storage and accessories.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="guides">
+
+    <h2 class="section-title">Gadget Buying Guides</h2>
+
+    <p class="section-text">
+        Practical information to help you make better gadget-buying decisions.
+    </p>
+
+    <div class="guides">
+
+        <div class="guide">
+            <h3>📱 Smartphone Buying Guide</h3>
+            <p>Learn what to check before choosing a new smartphone, including display, battery, performance and storage.</p>
+        </div>
+
+        <div class="guide">
+            <h3>🎧 TWS Earbuds Buying Guide</h3>
+            <p>Understand battery life, connectivity, microphones, comfort and other important features.</p>
+        </div>
+
+        <div class="guide">
+            <h3>⌚ Smartwatch Buying Guide</h3>
+            <p>Learn about display, battery, compatibility, notifications and other useful features.</p>
+        </div>
+
+        <div class="guide">
+            <h3>💻 Laptop Buying Guide</h3>
+            <p>Understand RAM, storage, processor choices and other factors before buying a laptop.</p>
+        </div>
+
+        <div class="guide">
+            <h3>💰 How to Check a Gadget Deal</h3>
+            <p>Learn how to compare prices and check whether an online gadget offer is genuinely useful.</p>
+        </div>
+
+        <div class="guide">
+            <h3>🔋 Gadget Battery Guide</h3>
+            <p>Understand battery capacity, charging and everyday battery-life considerations.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about" id="about">
+
+    <h2 class="section-title">About DealRadar India</h2>
+
+    <p class="section-text">
+        DealRadar India helps shoppers discover useful information about
+        gadgets, electronics and online deals. We focus on smartphones,
+        audio products, smartwatches, laptops and accessories, along with
+        practical buying guides.
+    </p>
+
 </section>
 
 <section id="contact">
-  <div class="section-title"><h2>Contact</h2><p>Connect with DealRadar India.</p></div>
-  <div class="card" style="text-align:center">
-    <h3>📢 Telegram Channel</h3>
-    <p>Get gadget deal updates through our Telegram channel.</p>
-    <a class="btn primary" href="https://t.me/dealradar_ind" target="_blank" rel="noopener">Open Telegram</a>
-  </div>
+
+    <div class="telegram">
+
+        <h2>📢 Join DealRadar India on Telegram</h2>
+
+        <p>
+            Get gadget updates and deal information through our Telegram channel.
+        </p>
+
+        <a class="button" href="https://t.me/dealradar_ind" target="_blank">
+            Open Telegram Channel
+        </a>
+
+    </div>
+
 </section>
 
+</main>
+
 <footer>
-  © 2026 DealRadar India 🇮🇳 • Prices and availability may change.
-  <br><br>
-  Affiliate disclosure will be displayed here if/when the site participates in an affiliate program.
+
+    <p>© 2026 DealRadar India 🇮🇳</p>
+
+    <p>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </p>
+
+    <div class="disclosure">
+        Affiliate disclosure: DealRadar India may use affiliate links where applicable.
+        Any required affiliate disclosures will be displayed clearly when affiliate links are used.
+    </div>
+
 </footer>
+
 </body>
 </html>
